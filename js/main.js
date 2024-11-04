@@ -81,7 +81,7 @@ function mostrarResultados(results) {
 
 function seleccionarResultado(categoria, id){
     
-    const url =`http://gateway.marvel.com/v1/public/${categoria}/${id}?ts=29/10/2024, 01:33:37&apikey=47e4d4138ec55916be7355cb7c2cd088&hash=049cee1075dbaf77c8420330f3091407`;
+    const url =`https://gateway.marvel.com/v1/public/${categoria}/${id}?ts=29/10/2024, 01:33:37&apikey=47e4d4138ec55916be7355cb7c2cd088&hash=049cee1075dbaf77c8420330f3091407`;
     fetch(url)
             .then(respuesta => respuesta.json())
             .then(resultado => abrirModal(resultado.data.results[0]))
